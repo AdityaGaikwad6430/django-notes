@@ -14,14 +14,14 @@ pipeline{
         stage("Build"){
             steps{
                 script{
-                    build("notes-app","latest")
+                    build("dockerHubcreds","notes-app","latest")
                 }
             }
         }
         stage("DockerPush"){
             steps{
                 script{
-                    dpush("notes-app","latest")
+                    dpush("dockerHubcreds","notes-app","latest")
                 }
             }
         }
