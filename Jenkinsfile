@@ -1,7 +1,7 @@
 @Library('Shared')_
 
 pipeline{
-    agent {label "binod"}
+    agent {label "Node1"}
     
     stages{
         stage("Code"){
