@@ -14,7 +14,7 @@ pipeline{
         stage("Build"){
             steps{
                 script{
-                    build("dockerHubcreds","notes-app","latest")
+                    build("notes-app", "latest", "dockerHubcreds")
                 }
             }
         }
