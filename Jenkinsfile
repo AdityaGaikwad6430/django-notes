@@ -18,9 +18,11 @@ pipeline{
                 }
             }
         }
-        stage("nginx"){
+        stage("DockerPush"){
             steps{
-                sh "sudo apt-get update && sudo apt install -y nginx"
+                script{
+                    dpush("notes-app","latest")
+                }
             }
         }
         stage("Test"){
