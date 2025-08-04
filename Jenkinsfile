@@ -38,5 +38,10 @@ pipeline{
                 }
             }
         }
+        stage("remove unnecessary images"){
+            steps{
+                sh"sudo docker rmi $(docker images -aq)"
+            }
+        }
     }
 }
