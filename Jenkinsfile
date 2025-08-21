@@ -6,6 +6,7 @@ pipeline{
     stages{
         stage("Code"){
             steps{
+                sh"sudo apt update && sudo apt install git -y"
                 script{
                     clone("https://github.com/AdityaGaikwad6430/django-notes.git","main")
                 }
